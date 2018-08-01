@@ -1,24 +1,30 @@
 [user]
-        name = Mark Tozzi
-        email = mark.tozzi@gmail.com
+    name = Mark Tozzi
+    email = mark.tozzi@gmail.com
 
 [color]
     branch = auto
     diff = auto
     status = auto
     ui = true
+
 [push]
-        default = simple
+    default = simple
+
 [credential]
-        helper = osxkeychain
+    helper = osxkeychain
+
 [core]
-        ignorecase = false
-        excludesfile = ~/.gitignore
+    ignorecase = false
+    excludesfile = ~/.gitignore
+	editor = nvim
+
 [init]
-        templatedir = ~/.git_template
+    templatedir = ~/.git_template
+
 [alias]
-        ctags = !.git/hooks/ctags
-[alias]
+    ctags = !.git/hooks/ctags
+
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative
     hist = log --graph --pretty=format:'%h %ad | %s%d [%an]' --date=short
     last = log -1 HEAD
@@ -26,9 +32,13 @@
     amend = commit --amend -C HEAD
     outgoing = log @{u}..
     touch = commit --allow-empty -m \"trigger rebuild\"
+    pr = "!f() { git ftch origin pull/$1; }; f"
+
 [merge]
     tool = diffconflicts
+
 [mergetool "diffconflicts"]
     cmd = diffconflicts nvim $BASE $LOCAL $REMOTE $MERGED
+
 [github]
         user = not-napoleon
