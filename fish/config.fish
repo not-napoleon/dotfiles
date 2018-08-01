@@ -1,3 +1,5 @@
-eval (python -m virtualfish)
-set PATH $HOME/.jenv/bin $PATH
+eval (python3 -m virtualfish)
 
+fundle plugin 'tuvistavie/fish-ssh-agent'
+
+fundle init
