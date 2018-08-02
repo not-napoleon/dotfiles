@@ -32,7 +32,9 @@
     amend = commit --amend -C HEAD
     outgoing = log @{u}..
     touch = commit --allow-empty -m \"trigger rebuild\"
+
     pr = "!f() { git ftch origin pull/$1; }; f"
+    addfork = "!git remote add not-napoleon `git remote get-url origin | sed 's/github.com:elastic/github.com:not-napoleon/'`"
 
 [merge]
     tool = diffconflicts
