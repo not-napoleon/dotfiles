@@ -36,6 +36,8 @@
     pr = "!f() { git ftch origin pull/$1; }; f"
     addfork = "!git remote add not-napoleon `git remote get-url origin | sed 's/github.com:elastic/github.com:not-napoleon/'`"
 
+    fix = "!f() { nvim `git diff --name-only | uniq`; }; f"
+
 [merge]
     tool = diffconflicts
 
