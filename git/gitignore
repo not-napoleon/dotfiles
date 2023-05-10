@@ -4,3 +4,5 @@
 .ruby-version
 
 tags
+
+.backportrc.json

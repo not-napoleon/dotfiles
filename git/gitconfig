@@ -42,7 +42,7 @@
     tool = diffconflicts
 
 [mergetool "diffconflicts"]
-    cmd = diffconflicts nvim $BASE $LOCAL $REMOTE $MERGED
+    cmd = nvim -d $BASE $LOCAL 
 
 [github]
         user = not-napoleon
