@@ -163,12 +163,20 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+  {
+    "tpope/vim-surround",
+
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+      --  vim.o.timeoutlen = 500
+    -- end
+  },
+  { "tpope/vim-repeat" },
+  { "tpope/vim-unimpaired" },
+  { "easymotion/vim-easymotion" },
+
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {

@@ -15,3 +15,12 @@ For installing Java SDKs, and other similar things
 
 - [Homepage](https://sdkman.io/)
 - `curl -s "https://get.sdkman.io" | bash`
+
+## NerdFonts
+
+- [Homepage](https://github.com/ryanoasis/nerd-fonts)
+
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
