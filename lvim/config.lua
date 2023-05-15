@@ -12,13 +12,30 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "lunar"
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = "space"
+lvim.leader = "\\"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+
+-- Easymotion Keys
+lvim.keys.normal_mode["f"] = "<Plug>(easymotion-f)"
+lvim.keys.normal_mode["F"] = "<Plug>(easymotion-F)"
+lvim.keys.normal_mode["t"] = "<Plug>(easymotion-t)"
+lvim.keys.normal_mode["T"] = "<Plug>(easymotion-T)"
+
+-- use spacebar to toggle folds
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+lvim.keys.normal_mode["<space>"] = "za"
+lvim.keys.visual_mode["<space>"] = "za"
+
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
