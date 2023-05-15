@@ -11,3 +11,5 @@ set -x JAVA20_HOME /Users/marktozzi/.sdkman/candidates/java/20.0.1-open/
 
 fish_add_path /Users/marktozzi/.pyenv/shims
 fish_vi_key_bindings
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
