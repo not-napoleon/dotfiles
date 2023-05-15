@@ -10,3 +10,4 @@ set -x JAVA17_HOME /Users/marktozzi/.sdkman/candidates/java/17.0.1-oracle
 set -x JAVA20_HOME /Users/marktozzi/.sdkman/candidates/java/20.0.1-open/
 
 fish_add_path /Users/marktozzi/.pyenv/shims
+fish_vi_key_bindings
