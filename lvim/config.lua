@@ -30,6 +30,9 @@ lvim.keys.normal_mode["F"] = "<Plug>(easymotion-F)"
 lvim.keys.normal_mode["t"] = "<Plug>(easymotion-t)"
 lvim.keys.normal_mode["T"] = "<Plug>(easymotion-T)"
 
+-- Rest.nvim keys
+lvim.keys.normal_mode["<C-j>"] = "<Plug>RestNvim"
+
 -- use spacebar to toggle folds
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
@@ -181,18 +184,19 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {
+    {
     "tpope/vim-surround",
 
     -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
     -- setup = function()
       --  vim.o.timeoutlen = 500
     -- end
-  },
-  { "tpope/vim-repeat" },
-  { "tpope/vim-unimpaired" },
-  { "easymotion/vim-easymotion" },
-
+    },
+    { "tpope/vim-repeat" },
+    { "tpope/vim-unimpaired" },
+    { "easymotion/vim-easymotion" },
+    { "rest-nvim/rest.nvim" },
+    { "nvim-lua/plenary.nvim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
