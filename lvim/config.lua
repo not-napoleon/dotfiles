@@ -31,7 +31,8 @@ lvim.keys.normal_mode["t"] = "<Plug>(easymotion-t)"
 lvim.keys.normal_mode["T"] = "<Plug>(easymotion-T)"
 
 -- Rest.nvim keys
-lvim.keys.normal_mode["<C-j>"] = "<Plug>RestNvim"
+lvim.keys.normal_mode["<leader>r"] = "<Plug>RestNvim"
+lvim.keys.normal_mode["<leader>R"] = "<Plug>RestNvimPreview"
 
 -- use spacebar to toggle folds
 vim.opt.foldmethod = "indent"
@@ -92,6 +93,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
+  "http",
   "javascript",
   "json",
   "lua",
