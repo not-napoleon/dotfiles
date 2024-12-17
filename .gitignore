@@ -1,5 +1,14 @@
 StardewValley/
 configstore/
 menus/
-nvim/
 fish/conf.d/
+
+# Copied from lazyvim git ignore
+nvim/tt.*
+nvim/.tests
+nvim/doc/tags
+nvim/debug
+nvim/.repro
+nvim/foo.*
+nvim/*.log
+nvim/data

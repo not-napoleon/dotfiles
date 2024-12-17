@@ -9,7 +9,7 @@ set -x JAVA_HOME /Users/marktozzi/.sdkman/candidates/java/current
 set -x JAVA17_HOME /Users/marktozzi/.sdkman/candidates/java/17.0.7-tem/
 set -x JAVA20_HOME /Users/marktozzi/.sdkman/candidates/java/20.0.1-open/
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/usr/local/bin/brew shellenv)"
 
 fish_add_path $(brew --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
