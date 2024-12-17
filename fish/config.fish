@@ -1,5 +1,5 @@
 fish_add_path /Users/marktozzi/.local/bin
-set -x EDITOR lvim
+set -x EDITOR nvim
 
 set -x JAVA_HOME /Users/marktozzi/.sdkman/candidates/java/current
 
@@ -9,7 +9,13 @@ set -x JAVA_HOME /Users/marktozzi/.sdkman/candidates/java/current
 set -x JAVA17_HOME /Users/marktozzi/.sdkman/candidates/java/17.0.7-tem/
 set -x JAVA20_HOME /Users/marktozzi/.sdkman/candidates/java/20.0.1-open/
 
-eval "$(/usr/local/bin/brew shellenv)"
+if test -e /usr/local/bin/brew
+  set brew_path /usr/local/bin/brew
+else if test -e /opt/homebrew/bin/brew
+  set brew_path /opt/homebrew/bin/brew
+end
+
+eval "$($brew_path shellenv)"
 
 fish_add_path $(brew --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
