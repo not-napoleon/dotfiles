@@ -11,6 +11,7 @@ Python virtualenv support and integration for fish.
 
 
 ## SDKMan
+Ideally, installed via fisher: `fisher install reitzig/sdkman-for-fish@v2.0.0`
 For installing Java SDKs, and other similar things
 
 - [Homepage](https://sdkman.io/)
