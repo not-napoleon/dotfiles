@@ -1,5 +1,5 @@
 -- vim: ts=2 sts=2 sw=2 et
-
+ 
 -- External tools required
 -- Windows Terminal + pwsh
 -- mingw64 toolchain: https://www.msys2.org/
@@ -54,16 +54,11 @@ opt.undolevels = 10000
 opt.secure = true
 opt.exrc = true
 
--- set leader key to space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
+-- set leader key to backslash
+vim.g.mapleader = '\\'
+vim.g.maplocalleader = '\\'
+-- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
 
-vim.keymap.set('t', '<Esc>', "<C-\\><C-n>")
-vim.keymap.set('t', '<C-w>', "<C-\\><C-n><C-w>")
-
--- minimize terminal split
-vim.keymap.set('n', '<C-g>', "3<C-w>_")
 
 -- plugins
 
@@ -81,7 +76,7 @@ require("lazy").setup({
     end
   },
 
-  {"easymotion/vim-easymotion", lazy = true}
+  {"easymotion/vim-easymotion", lazy = false},
 
   -- language server protocol
   { "neovim/nvim-lspconfig",
@@ -299,3 +294,9 @@ vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {desc = 'Goto Definiti
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {desc = 'Code Action'})
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {desc = 'Hover Documentation'})
 vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format, {desc = 'Format Code'})
+
+-- Easy Motion
+vim.keymap.set({'n', 'o', 'v'}, 'f', '<Plug>(easymotion-bd-fl)')
+vim.keymap.set({'n', 'o', 'v'}, 'F', '<Plug>(easymotion-bd-f)')
+vim.keymap.set({'n', 'o', 'v'}, 't', '<Plug>(easymotion-bd-tl)')
+vim.keymap.set({'n', 'o', 'v'}, 'T', '<Plug>(easymotion-bd-t)')
