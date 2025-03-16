@@ -18,7 +18,6 @@ local opt = vim.opt
 
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-opt.termencoding = "utf-8"
 
 opt.clipboard = "unnamedplus"
 opt.completeopt = "menu,menuone,noselect"
