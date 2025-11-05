@@ -1,5 +1,10 @@
 -- vim: ts=2 sts=2 sw=2 et
 
+-- TODO:
+--   [ ] configure feline
+--   [ ] set up LSP for python (at least)
+--   [ ] Treesitter? 
+
 local opt = vim.opt
 
 -- opt.encoding = "utf-8"
@@ -43,39 +48,8 @@ vim.pack.add({
 
 })
 
-  -- surround text object
-  --{ "echasnovski/mini.surround",
-    --config = function(_, opts)
-      --require('mini.surround').setup(opts)
-    --end
-  --},
---
-  -- show indent guides on blank lines
-  --{ "lukas-reineke/indent-blankline.nvim",
-    --main = "ibl",
-    --opts = {},
-  --},
---})
-
 -- set colour scheme
 vim.cmd.colorscheme "catppuccin"
-
--- highlight yanked text
---local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
---vim.api.nvim_create_autocmd('TextYankPost', {
-    --callback = function()
-        --vim.highlight.on_yank()
-    ----end,
-    --group = highlight_group,
-    --pattern = '*',
---})
-
--- lsp keybindings
---vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {desc = 'Rename Symbol'})
---vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {desc = 'Goto Definition'})
---vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {desc = 'Code Action'})
---vim.keymap.set('n', 'K', vim.lsp.buf.hover, {desc = 'Hover Documentation'})
---vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format, {desc = 'Format Code'})
 
 -- Easy Motion
 vim.keymap.set({'n', 'o', 'v'}, 'f', '<Plug>(easymotion-bd-fl)')
