@@ -1,3 +1,5 @@
+-- Rewritten in 2025 to use the nvim native plugin manager
+
 -- vim: ts=2 sts=2 sw=2 et
 
 -- TODO:
@@ -44,9 +46,19 @@ vim.pack.add({
   "https://github.com/catppuccin/nvim",
   "https://github.com/tpope/vim-surround",
   "https://github.com/Famiu/feline.nvim",
-  "https://github.com/easymotion/vim-easymotion"
+  "https://github.com/easymotion/vim-easymotion",
+  "https://github.com/diepm/vim-rest-console"
 
 })
+
+-- plugin configuration
+
+-- Vim Rest Console
+vim.g.vrc_elasticsearch_support = 1
+vim.g.vrc_output_buffer_name = '__VRC_OUTPUT.json'
+vim.g.vrc_response_default_content_type = 'json'
+vim.g.vrc_auto_format_response_patterns = { json = "jq ." }
+
 
 -- set colour scheme
 vim.cmd.colorscheme "catppuccin"

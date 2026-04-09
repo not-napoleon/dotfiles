@@ -21,6 +21,3 @@ fish_add_path $(brew --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
 fish_vi_key_bindings
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/marktozzi/Applications/google-cloud-sdk/path.fish.inc' ]; . '/Users/marktozzi/Applications/google-cloud-sdk/path.fish.inc'; end
