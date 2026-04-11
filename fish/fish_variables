@@ -1,9 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export INFOSEC_PRECOMMIT_TOKEN:ent_9OydfoQNsel4/sUf1RKpYa4jq4o3GoFHmgpW9FFBY/sSQ5/ObmkjxyYdvk9m/7yMpyLsjdNxwTIIZHwIQDM5Pnp3CJpwNkE1rUeLrncXZppVfxN2EEFhWNVFS5LhU0n\x2bPCHJXX0SqZT0Rw\x2b1Z9lgzbZq/ecdHai259WMOXTv5Q6EEccEC5vgKhj8GA\x3d\x3d
-SETUVAR __fish_initialized:4300
+SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ereitzig/sdkman\x2dfor\x2dfish\x40v1\x2e4\x2e0
 SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_40_v1_2E_34_2E_30__files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_user_paths:/opt/homebrew/opt/python\x403\x2e14/libexec/bin\x1e/opt/homebrew/opt/python\x403\x2e13/libexec/bin\x1e/usr/local/opt/python\x403\x2e13/libexec/bin\x1e/usr/local/opt/python\x403\x2e12/libexec/bin\x1e/usr/local/opt/python\x403\x2e11/libexec/bin\x1e/opt/homebrew/opt/python\x403\x2e11/libexec/bin\x1e/Users/marktozzi/\x2elocal/bin
