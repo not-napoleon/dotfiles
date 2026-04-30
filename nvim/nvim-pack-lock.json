@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "feline.nvim": {
+      "rev": "3587f57",
+      "src": "https://github.com/Famiu/feline.nvim"
+    },
+    "nvim": {
+      "rev": "234fc04",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "vim-easymotion": {
+      "rev": "b3cfab2",
+      "src": "https://github.com/easymotion/vim-easymotion"
+    },
+    "vim-rest-console": {
+      "rev": "7b407f4",
+      "src": "https://github.com/diepm/vim-rest-console"
+    },
+    "vim-surround": {
+      "rev": "3d188ed",
+      "src": "https://github.com/tpope/vim-surround"
+    }
+  }
+}
