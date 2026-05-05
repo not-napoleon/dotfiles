@@ -42,29 +42,9 @@ vim.g.maplocalleader = '\\'
 
 
 -- plugins
-vim.pack.add({
-  "https://github.com/catppuccin/nvim",
-  "https://github.com/tpope/vim-surround",
-  "https://github.com/Famiu/feline.nvim",
-  "https://github.com/easymotion/vim-easymotion",
-  "https://github.com/diepm/vim-rest-console"
+require("plugins.easy_motion")
+require("plugins.vim_rest_console")
+require("plugins.feline")
+require("plugins.vim_surround")
+require("plugins.catppuccin")
 
-})
-
--- plugin configuration
-
--- Vim Rest Console
-vim.g.vrc_elasticsearch_support = 1
-vim.g.vrc_output_buffer_name = '__VRC_OUTPUT.json'
-vim.g.vrc_response_default_content_type = 'json'
-vim.g.vrc_auto_format_response_patterns = { json = "jq ." }
-
-
--- set colour scheme
-vim.cmd.colorscheme "catppuccin"
-
--- Easy Motion
-vim.keymap.set({'n', 'o', 'v'}, 'f', '<Plug>(easymotion-bd-fl)')
-vim.keymap.set({'n', 'o', 'v'}, 'F', '<Plug>(easymotion-bd-f)')
-vim.keymap.set({'n', 'o', 'v'}, 't', '<Plug>(easymotion-bd-tl)')
-vim.keymap.set({'n', 'o', 'v'}, 'T', '<Plug>(easymotion-bd-t)')
