@@ -27,6 +27,7 @@ vim.opt.updatetime = 250            -- Sets the delay (ms) for showing diagnosti
 vim.opt.splitbelow = true           -- Prefer splits to be on the bottom
 vim.opt.splitright = true           -- Prefer vsplits to be on the right
 vim.opt.signcolumn = "yes"          -- Show the sign column by default
+vim.opt.foldlevel = 99              -- Start with everything unfolded
 
 -- ==============================================================================
 -- SEARCH
