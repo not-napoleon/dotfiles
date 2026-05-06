@@ -6,35 +6,11 @@
 --   [ ] configure feline
 --   [ ] set up LSP for python (at least)
 --   [ ] Treesitter? 
+--   [ ] nvim-cmp?
 
-local opt = vim.opt
+require("config.options")
 
--- opt.encoding = "utf-8"
--- opt.fileencoding = "utf-8"
 
--- opt.hlsearch = false
--- opt.ignorecase = true
--- opt.smartcase = true
-
-opt.cursorline = true
-opt.number = true
-
--- opt.splitbelow = true
--- opt.splitright = true
-
--- opt.expandtab = true
--- opt.shiftwidth = 4
--- opt.shiftround = true
--- opt.tabstop = 4
-
--- opt.signcolumn = "yes"
--- opt.termguicolors = true
-
-opt.undofile = true
-opt.undolevels = 10000
-
--- opt.secure = true
--- opt.exrc = true
 
 -- set leader key to backslash
 vim.g.mapleader = '\\'
