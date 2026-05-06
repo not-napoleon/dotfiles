@@ -5,7 +5,6 @@
 -- TODO:
 --   [ ] configure feline
 --   [ ] set up LSP for python (at least)
---   [ ] Treesitter? 
 --   [ ] nvim-cmp?
 
 -- General Config
@@ -18,4 +17,5 @@ require("plugins.vim_rest_console")
 require("plugins.feline")
 require("plugins.vim_surround")
 require("plugins.catppuccin")
+require("plugins.treesitter")
 
