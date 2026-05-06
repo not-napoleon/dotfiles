@@ -8,14 +8,9 @@
 --   [ ] Treesitter? 
 --   [ ] nvim-cmp?
 
+-- General Config
 require("config.options")
-
-
-
--- set leader key to backslash
-vim.g.mapleader = '\\'
-vim.g.maplocalleader = '\\'
-
+require("config.keybindings")
 
 -- plugins
 require("plugins.easy_motion")
