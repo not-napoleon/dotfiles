@@ -8,8 +8,6 @@
 
 -- TODO:
 --   [ ] Replace feline with lualine
---   [ ] set up LSP for python (at least)
---   [ ] nvim-cmp?
 
 -- General Config
 require("config.options")
@@ -23,3 +21,4 @@ require("plugins.vim_surround")
 require("plugins.catppuccin")
 require("plugins.treesitter")
 require("plugins.lsp")
+require("plugins.completions")
