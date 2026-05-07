@@ -9,17 +9,18 @@
 -- TODO:
 --   [ ] Replace feline with lualine
 
--- General Config
-require("config.options")
-require("config.keybindings")
-
 -- plugins
-require("plugins.easy_motion")
-require("plugins.vim_rest_console")
-require("plugins.feline")
-require("plugins.vim_surround")
-require("plugins.catppuccin")
-require("plugins.treesitter")
-require("plugins.lsp")
-require("plugins.completions")
-require("plugins.formatting")
+require "plugins.easy_motion"
+require "plugins.vim_rest_console"
+require "plugins.feline"
+require "plugins.vim_surround"
+require "plugins.catppuccin"
+require "plugins.treesitter"
+require "plugins.lsp"
+require "plugins.completions"
+require "plugins.formatting"
+require "plugins.telescope"
+
+-- General Config (after plugins, for keybindings to see them)
+require "config.options"
+require "config.keybindings"
