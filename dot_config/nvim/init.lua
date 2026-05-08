@@ -12,7 +12,6 @@
 -- plugins
 require "plugins.easy_motion"
 require "plugins.vim_rest_console"
-require "plugins.feline"
 require "plugins.vim_surround"
 require "plugins.catppuccin"
 require "plugins.treesitter"
@@ -20,6 +19,7 @@ require "plugins.lsp"
 require "plugins.completions"
 require "plugins.formatting"
 require "plugins.telescope"
+require "plugins.statusline"
 
 -- General Config (after plugins, for keybindings to see them)
 require "config.options"
