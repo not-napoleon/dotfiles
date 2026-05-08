@@ -20,6 +20,7 @@ require "plugins.completions"
 require "plugins.formatting"
 require "plugins.telescope"
 require "plugins.statusline"
+require "plugins.whichkey"
 
 -- General Config (after plugins, for keybindings to see them)
 require "config.options"
