@@ -1,0 +1,41 @@
+# This is Git's per-user configuration file.
+
+[user]
+name = Mark Tozzi
+email = mark.tozzi@gmail.com
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = true
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /Users/marktozzi/.netlify/helper/git-config
+
+[pull]
+	ff = only
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative
+    hist = log --graph --pretty=format:'%h %ad | %s%d [%an]' --date=short
+    last = log -1 HEAD
+    amend = commit --amend -C HEAD
+    outgoing = log @{u}..
+
+[merge]
+    tool = diffconflicts
+
+[mergetool "diffconflicts"]
+    cmd = nvim -d $BASE $LOCAL 
+
+[github]
+        user = not-napoleon
