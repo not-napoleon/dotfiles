@@ -1,0 +1,12 @@
+
+[[Snippets]]
+  Description = "interactively browse git branches to checkout"
+  Output = ""
+  Tag = ["git", "fzf"]
+  command = "git branch | fzf | xargs git checkout"
+
+[[Snippets]]
+  Description = "Interactively find a file to edit"
+  Output = ""
+  Tag = []
+  command = "nvim (fzf --preview 'bat --color=always {}')"
