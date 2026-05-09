@@ -36,3 +36,9 @@ abbr -a gb git branch
 abbr -a --command git co checkout 
 abbr -a --command git br branch
 abbr -a --command git st status
+
+if type -q zoxide
+    zoxide init fish | source
+else
+    echo "consider installing zoxide for better directory navigation"
+end
