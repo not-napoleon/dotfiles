@@ -8,5 +8,17 @@
 [[Snippets]]
   Description = "Interactively find a file to edit"
   Output = ""
-  Tag = []
+  Tag = ["fzf", "nvim", "editor"]
   command = "nvim (fzf --preview 'bat --color=always {}')"
+
+[[Snippets]]
+  Description = "Make a snippet of the previous command"
+  Output = ""
+  Tag = ["snippets"]
+  command = "prev"
+
+[[Snippets]]
+  Description = "Interactively select a managed config file to edit"
+  Output = ""
+  Tag = ["fzf", "chezmoi", "nvim", "editor"]
+  command = "chezmoi managed -i files -p absolute | fzf --preview 'bat --color=always {}' | xargs chezmoi edit --apply"

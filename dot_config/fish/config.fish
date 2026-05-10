@@ -7,8 +7,11 @@ fish_add_path $(brew --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
 fish_vi_key_bindings
 
+# chezmoi
 if type -q chezmoi
     abbr -a cz chezmoi
+    abbr -a cza chezmoi add
+    abbr -a czr chezmoi re-add
 end
 
 if type -q lsd
