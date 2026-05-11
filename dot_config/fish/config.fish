@@ -42,6 +42,10 @@ abbr -a --command git co checkout
 abbr -a --command git br branch
 abbr -a --command git st status
 
+# Vim habbits
+abbr -a lvim nvim
+abbr -a vim nvim
+
 if type -q zoxide
     zoxide init fish | source
 else

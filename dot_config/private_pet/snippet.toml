@@ -9,7 +9,7 @@
   Description = "Interactively find a file to edit"
   Output = ""
   Tag = ["fzf", "nvim", "editor"]
-  command = "nvim (fzf --preview 'bat --color=always {}')"
+  command = "nvim $(fzf --preview 'bat --color=always {}')"
 
 [[Snippets]]
   Description = "Make a snippet of the previous command"
