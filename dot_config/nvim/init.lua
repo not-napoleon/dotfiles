@@ -23,6 +23,7 @@ require "plugins.telescope"
 require "plugins.statusline"
 require "plugins.whichkey"
 require "plugins.neotree"
+require "plugins.bufferline"
 
 -- General Config (after plugins, for keybindings to see them)
 require "config.options"
