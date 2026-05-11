@@ -7,6 +7,8 @@ fish_add_path $(brew --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
 fish_vi_key_bindings
 
+fish_config theme choose catppuccin-mocha --color-theme=dark
+
 # chezmoi
 if type -q chezmoi
     abbr -a cz chezmoi
