@@ -3,6 +3,7 @@
 --
 -- References:
 -- https://rubenhortas.github.io/posts/moden-neovim-ide-lua-guide-2026/
+-- https://github.com/hendrikmi/dotfiles
 
 -- vim: ts=2 sts=2 sw=2 et
 
@@ -21,6 +22,7 @@ require "plugins.formatting"
 require "plugins.telescope"
 require "plugins.statusline"
 require "plugins.whichkey"
+require "plugins.neotree"
 
 -- General Config (after plugins, for keybindings to see them)
 require "config.options"
