@@ -56,3 +56,9 @@ if type -q starship
     set -g -x STARSHIP_CONFIG ~/.config/starship/starship.toml
     starship init fish | source
 end
+
+if type -q fastfetch
+    function fish_greeting
+        fastfetch
+    end
+end
