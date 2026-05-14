@@ -1,9 +1,11 @@
 fish_add_path /Users/marktozzi/.local/bin
 set -x EDITOR nvim
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+set -l BREW $(type -p brew)
 
-fish_add_path $(brew --prefix python)/libexec/bin
+eval "$($BREW shellenv)"
+
+fish_add_path $($BREW --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
 fish_vi_key_bindings
 
@@ -49,16 +51,21 @@ abbr -a vim nvim
 if type -q zoxide
     zoxide init fish | source
 else
-    echo "consider installing zoxide for better directory navigation"
+    echo "consider installing zoxide `brew install zoxide`"
 end
 
 if type -q starship
     set -g -x STARSHIP_CONFIG ~/.config/starship/starship.toml
     starship init fish | source
+else 
+    echo "Consider installing Starship: `brew install starship`"
 end
 
 if type -q fastfetch
     function fish_greeting
         fastfetch
     end
+else
+    echo "consider installing fastfetch `brew install fastfetch`"
 end
+
