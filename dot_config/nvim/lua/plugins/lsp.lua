@@ -1,6 +1,7 @@
 -- ==============================================================================
 -- LSP PLUGINS AND RELATED HELPERS
 -- ==============================================================================
+
 vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
@@ -22,10 +23,12 @@ require("mason").setup({
         }
     }
 })
+
 -- ==============================================================================
 -- KEYMAPS AND BUFFER SPECIFIC BEHAVIOR
 -- This is applied only on Lsp Attach, for the current buffer
 -- ==============================================================================
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 	-- Create a function that lets us more easily define mappings specific LSP related items.
@@ -208,3 +211,31 @@ for server, cfg in pairs(servers) do
 	vim.lsp.config(server, cfg)
 	vim.lsp.enable(server)
 end
+
+-- ==============================================================================
+-- Diagnostics Configuration
+-- ==============================================================================
+
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "󱈸",
+			[vim.diagnostic.severity.HINT] = "󰌵 ",
+			[vim.diagnostic.severity.INFO] = "i",
+		},
+	},
+	update_in_insert = false,
+	underline = true,
+	severity_sort = true,
+	float = {
+		focusable = false,
+		style = "minimal",
+		border = "rounded",
+		source = "always",
+		header = "",
+		prefix = "",
+	},
+})
+
