@@ -9,7 +9,7 @@ require('nvim-treesitter').setup {
   install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
-require('nvim-treesitter').install { 
+require('nvim-treesitter').install {
     'bash',
     'c',
     'cpp',
@@ -26,6 +26,6 @@ require('nvim-treesitter').install {
     'lua',
     'luadoc',
     'python',
-    'rust', 
+    'rust',
     'sql'
 }
