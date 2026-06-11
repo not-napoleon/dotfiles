@@ -26,7 +26,7 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = "nvim_lsp" }, -- Highest priority
     }, {
-        { name = "buffer" }, -- Text from current file
+--         { name = "buffer" }, -- Text from current file
         { name = "path" },   -- File paths
         { name = "emoji" },  -- Emoji
     }),
