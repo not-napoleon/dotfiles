@@ -20,3 +20,9 @@ vim.pack.add ({
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons",
 })
+
+-- Enable selecting emoji from telescope.  Emoji installed in completions.lua
+require("telescope").load_extension("emoji")
+-- optional for telescope emoji integration
+local ts = require("telescope").load_extension "emoji"
+vim.keymap.set("n", "<leader>se", ts.emoji, { desc = "[S]earch [E]moji" })

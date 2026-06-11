@@ -3,6 +3,7 @@ vim.pack.add({
     "https://github.com/hrsh7th/cmp-buffer",
     "https://github.com/hrsh7th/cmp-path",
     "https://github.com/hrsh7th/cmp-cmdline",
+    "https://github.com/Allaman/emoji.nvim",
 })
 
 local cmp = require("cmp")
@@ -27,6 +28,7 @@ cmp.setup({
     }, {
         { name = "buffer" }, -- Text from current file
         { name = "path" },   -- File paths
+        { name = "emoji" },  -- Emoji
     }),
 })
 
@@ -42,3 +44,10 @@ cmp.setup.cmdline(':', {
     matching = { disallow_symbol_nonprefix_matching = false }
 })
 
+require("emoji").setup {
+  -- enable completion
+  enable_cmp_integration = true,
+  -- optional if your plugin installation directory
+  -- is not vim.fn.stdpath("data") .. "/lazy/
+  plugin_path = vim.fn.expand "$HOME/.local/share/nvim/site/pack/core/opt",
+}
