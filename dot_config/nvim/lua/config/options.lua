@@ -35,7 +35,7 @@ vim.opt.foldlevel = 99              -- Start with everything unfolded
 vim.opt.path:append("**")           -- Allow searching for files recursively (e.g., :find filename)
 vim.opt.incsearch = true            -- Show results as you type the search pattern (incremental search)
 vim.opt.hlsearch = true             -- Highlight all matches of the last search pattern
-vim.opt.ignorecase = false          -- Ignore case when searching
+vim.opt.ignorecase = true           -- Ignore case when searching
 vim.opt.smartcase = true            -- Override ignorecase if the search pattern contains uppercase letters
 
 -- ==============================================================================
