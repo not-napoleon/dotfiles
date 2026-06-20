@@ -30,6 +30,7 @@ if type -q fd
 end
 
 # Git
+abbr -a g git
 abbr -a gs git status
 abbr -a ga git add
 abbr -a gaa git add --all
@@ -43,6 +44,7 @@ abbr -a gb git branch
 abbr -a --command git co checkout 
 abbr -a --command git br branch
 abbr -a --command git st status
+abbr -a --command git c commit
 
 # Vim habbits
 abbr -a lvim nvim
@@ -50,6 +52,7 @@ abbr -a vim nvim
 
 if type -q zoxide
     zoxide init fish | source
+    abbr -a cd z
 else
     echo "consider installing zoxide `brew install zoxide`"
 end
