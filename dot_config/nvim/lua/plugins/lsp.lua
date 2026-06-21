@@ -182,6 +182,24 @@ local servers = {
 			},
 		},
 	},
+    ["rust-analyzer"] = {
+        filetype = { "rust" },
+        cmd = { "rust-analyzer" },
+        settings = {
+            ["rust-analyzer"] = {
+                files = { watcher = "server" },
+                cargo = { targetDir = true },
+                check = { command = "clippy" },
+                inlayHints = {
+                    bindingModeHints = { enabled = true },
+                    closureCaptureHints = { enabled = true },
+                    closureReturnTypeHints = { enable = "always" },
+                    maxLength = 100,
+                },
+                rustc = { source = "discover" },
+            },
+        },
+    },
 	ruff = {},
 	jsonls = {},
 	sqlls = {},
@@ -209,7 +227,12 @@ for server, cfg in pairs(servers) do
 	cfg.capabilities = vim.tbl_deep_extend("force", {}, capabilities, cfg.capabilities or {})
 
 	vim.lsp.config(server, cfg)
-	vim.lsp.enable(server)
+
+    -- For reasons I don't understand yet, enabling rust analyzer here causes it to activate for
+    -- all file types, regardless of the configured file type for the lsp
+    if server ~= "rust-analyzer" then
+        vim.lsp.enable(server)
+    end
 end
 
 -- ==============================================================================
