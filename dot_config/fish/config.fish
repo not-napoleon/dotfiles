@@ -7,6 +7,7 @@ eval "$($BREW shellenv)"
 
 fish_add_path $($BREW --prefix python)/libexec/bin
 fish_add_path /Users/marktozzi/.pyenv/shims
+fish_add_path $($BREW --prefix rustup)/bin
 fish_vi_key_bindings
 
 fish_config theme choose catppuccin-mocha --color-theme=dark
