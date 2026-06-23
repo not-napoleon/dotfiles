@@ -7,13 +7,10 @@
 
 -- vim: ts=2 sts=2 sw=2 et
 
--- TODO:
---   [ ] Replace feline with lualine
 
 -- plugins
-require "plugins.easy_motion"
+require "plugins.misc"
 require "plugins.vim_rest_console"
-require "plugins.vim_surround"
 require "plugins.catppuccin"
 require "plugins.treesitter"
 require "plugins.lsp"
@@ -21,7 +18,6 @@ require "plugins.completions"
 require "plugins.formatting"
 require "plugins.telescope"
 require "plugins.statusline"
-require "plugins.whichkey"
 require "plugins.neotree"
 require "plugins.bufferline"
 
