@@ -39,3 +39,5 @@ email = mark.tozzi@gmail.com
 
 [github]
         user = not-napoleon
+[init]
+	defaultBranch = main
