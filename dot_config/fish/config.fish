@@ -51,6 +51,9 @@ abbr -a --command git c commit
 abbr -a lvim nvim
 abbr -a vim nvim
 
+# Commands I can never remember
+abbr -a maven mvn
+
 if type -q zoxide
     zoxide init fish | source
     abbr -a cd z
