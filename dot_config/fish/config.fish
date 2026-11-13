@@ -76,3 +76,13 @@ else
     echo "consider installing fastfetch `brew install fastfetch`"
 end
 
+
+# ssh config
+# see https://wikitech.wikimedia.org/wiki/Hardware-backed_SSH_keys
+set -x SSH_AUTH_SOCK "$HOME/.ssh/agent.sock"
+set SSH_AGENT_CMD ($BREW --prefix)/bin/ssh-agent 
+ssh-add -l >/dev/null 2>&1
+if test "$status" -eq 2
+    rm -f "$SSH_AUTH_SOCK"
+    $SSH_AGENT_CMD -a "$SSH_AUTH_SOCK" >/dev/null
+end
