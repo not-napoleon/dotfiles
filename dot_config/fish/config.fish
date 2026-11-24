@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/marktozzi/.docker/bin"
+# End of Docker Desktop section.
+
 fish_add_path /Users/marktozzi/.local/bin
 set -x EDITOR nvim
 
@@ -11,6 +15,8 @@ fish_add_path $($BREW --prefix rustup)/bin
 fish_vi_key_bindings
 
 fish_config theme choose catppuccin-mocha --color-theme=dark
+
+abbr -a s kitten ssh
 
 # chezmoi
 if type -q chezmoi
